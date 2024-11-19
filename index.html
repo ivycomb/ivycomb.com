@@ -1,277 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Ivycomb</title>
-<style>
-.meme {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-}
+    <!-- META INFO -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- PAGE TITLE -->
+    <title>ivycomb's Domain</title>
 
-p {
-	color: white;
-	font-family: Tahoma, Geneva, sans-serif;
-	cursor: default;
-	font-size: 20px}
-	
-.tracking-in-expand {
-	-webkit-animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;
-	        animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;
-}
+    <!-- META KEYWORDS AND DESCRIPTION -->
+    <meta name="keywords" content="ivycomb, ivycomb music, YouTuber, Twitch Streamer, Musician" />
+    <meta name="description" content="ivycomb's official website.">
+    <meta name="author" content="ivycomb">
 
-p::selection {
-	background: #ffffff}
-	
-object::selection {
-	background: #ffffff}
-	
-span::selection {
-	background: #ffffff}
-	
-a::selection {
-	background: #ffffff}
-	
-a {
-	color: white;
-	font-family: Tahoma, Geneva, sans-serif;
-	font-size: 20px}
+    <!-- META VIEW PORT -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
 
+    <!-- FAVICONS -->
 
-@-webkit-keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+    <!-- WEB FONT-FAMILY -->
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
 
+    <!-- VENDOR FONT ICONS CSS -->
+    <link rel="stylesheet" href="fonticons/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="fonticons/et-line/et-line-font.css">
+    <link rel="stylesheet" href="fonticons/material-webfont/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="fonticons/pixeden/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="fonticons/simplelineicons/css/simple-line-icons.css">
 
-.slide-in-elliptic-top-fwd {
-	-webkit-animation: slide-in-elliptic-top-fwd 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.2s both;
-	        animation: slide-in-elliptic-top-fwd 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.2s both;
-			
-}
+    <!-- COMMON VENDOR CSS -->
+    <link rel="stylesheet" href="vendor/animate-css/animate.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/sweetalert/sweetalert2.min.css">
+    <link rel="stylesheet" href="vendor/jarallax/jarallax.css">
+    <link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.css">
+    
+    <!-- PAGE SPECIFIC VENDOR CSS -->
 
-@-webkit-keyframes slide-in-elliptic-top-fwd {
-  0% {
-    -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
-            transform: translateY(-600px) rotateX(-30deg) scale(0);
-    -webkit-transform-origin: 50% 100%;
-            transform-origin: 50% 100%;
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0) rotateX(0) scale(1);
-            transform: translateY(0) rotateX(0) scale(1);
-    -webkit-transform-origin: 50% 1400px;
-            transform-origin: 50% 1400px;
-    opacity: 1;
-  }
-}
-@keyframes slide-in-elliptic-top-fwd {
-  0% {
-    -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
-            transform: translateY(-600px) rotateX(-30deg) scale(0);
-    -webkit-transform-origin: 50% 100%;
-            transform-origin: 50% 100%;
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0) rotateX(0) scale(1);
-            transform: translateY(0) rotateX(0) scale(1);
-    -webkit-transform-origin: 50% 1400px;
-            transform-origin: 50% 1400px;
-    opacity: 1;
-  }
-}
+    <!-- TEMPLATE COMMON CSS -->
+    <link rel="stylesheet" href="css/ckav-main.css">
+    <link rel="stylesheet" href="css/ckav-elements.css">
+    <link rel="stylesheet" href="css/ckav-helper.css">
+    <link rel="stylesheet" href="css/ckav-responsive.css">
 
-/* Shutter Out Horizontal */
-.hvr-shutter-out-horizontal {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  position: relative;
-  background: #ffb558;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-}
-.hvr-shutter-out-horizontal:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #3fb558;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transform-origin: 50%;
-  transform-origin: 50%;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
-.hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:active {
-  color: white;
-}
-.hvr-shutter-out-horizontal:hover:before, .hvr-shutter-out-horizontal:focus:before, .hvr-shutter-out-horizontal:active:before {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-}
+    <!-- DEMO SPECIFIC TEMPLATE CSS -->
 
-.hvr-grow {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-}
-.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
+    <!-- TEMPLATE THEME CSS -->
 
-@-webkit-keyframes hvr-wobble-horizontal {
-  16.65% {
-    -webkit-transform: translateX(8px);
-    transform: translateX(8px);
-  }
-  33.3% {
-    -webkit-transform: translateX(-6px);
-    transform: translateX(-6px);
-  }
-  49.95% {
-    -webkit-transform: translateX(4px);
-    transform: translateX(4px);
-  }
-  66.6% {
-    -webkit-transform: translateX(-2px);
-    transform: translateX(-2px);
-  }
-  83.25% {
-    -webkit-transform: translateX(1px);
-    transform: translateX(1px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-@keyframes hvr-wobble-horizontal {
-  16.65% {
-    -webkit-transform: translateX(8px);
-    transform: translateX(8px);
-  }
-  33.3% {
-    -webkit-transform: translateX(-6px);
-    transform: translateX(-6px);
-  }
-  49.95% {
-    -webkit-transform: translateX(4px);
-    transform: translateX(4px);
-  }
-  66.6% {
-    -webkit-transform: translateX(-2px);
-    transform: translateX(-2px);
-  }
-  83.25% {
-    -webkit-transform: translateX(1px);
-    transform: translateX(1px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-.hvr-wobble-horizontal {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-}
-.hvr-wobble-horizontal:hover, .hvr-wobble-horizontal:focus, .hvr-wobble-horizontal:active {
-  -webkit-animation-name: hvr-wobble-horizontal;
-  animation-name: hvr-wobble-horizontal;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-}
-
-::-moz-selection { /* Code for Firefox */
-  color: black;
-  background: white;
-}
-
-::selection {
-  color: black;
-  background: white;
-}
-
-</style>
-<link rel="shortcut icon" type="image/png" href="fav.png"/>
+    <!-- TEMPLATE USER CUSTOM CSS -->
+    <link rel="stylesheet" href="css/template-custom.css">
 </head>
-<body bgcolor="#ffb558">
 
-<div class="meme">
-	<p class="slide-in-elliptic-top-fwd" align="center">
-		<object class="hvr-wobble-horizontal" data="beegang.png" type="image/png" width="13.5%">
-		</object>
-	</p>
-	
-	<p class="tracking-in-expand">
-	<style="font-size:11px;">Ivycomb's official website, coming soon.</style>
-	<br>
-	<a href="https://discord.gg/ivy" class="hvr-shutter-out-horizontal hvr-grow">
-		<span class="hvr-shutter-out-horizontal hvr-grow"> Discord Server </span>
-	</a>
-	&mdash;
-	<a href="https://ivy.cm/queue" class="hvr-shutter-out-horizontal hvr-grow">
-		<span class="hvr-shutter-out-horizontal hvr-grow"> Trello Queue </span>
-	</a>
-	&mdash;
-	<a href="https://www.instagram.com/ivycomb" class="hvr-shutter-out-horizontal hvr-grow">
-		<span class="hvr-shutter-out-horizontal hvr-grow"> Instagram </span>
-	</a>
-	&mdash;
-	<a href="https://twitter.com/ivycomb" class="hvr-shutter-out-horizontal hvr-grow">
-		<span class="hvr-shutter-out-horizontal hvr-grow"> Twitter </span>
-	</a>
-	</p>
+<body class="ckav-body tooltip-light">
 
-<script>document.title = 'Ivycomb';
-</script>
-</div>
+    <!--
+    ************************************************************
+    * PAGE LOADER
+    *************************************************************
+    -->
+    <div id="loader">
+        <div class="load-three-bounce">
+            <div class="load-child bounce1"></div>
+            <div class="load-child bounce2"></div>
+            <div class="load-child bounce3"></div>
+        </div>
+    </div>
+    <!-- ************** END : PAGE LOADER **************  -->
+
+
+    <div class="ckav-body">
+        
+        <!--
+        ************************************************************
+        * HEADER
+        *************************************************************
+        -->
+        <header class="ckav-header-area" data-ckav-smd="padding-t-0">
+            <div class="inner-wrapper">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+
+                        <!-- LOGO -->
+                        <div class="col-2">
+                            <a href="#" class="logo-wrapper width-px-80" data-ckav-smd="margin-t-10 margin-b-10 width-px-60">
+                                <img src="images/logo.png" alt="ckav">
+                            </a>
+                        </div>
+
+                        <!-- NAVIGATION -->
+                        <div class="col-10 flex-cr">
+
+                            <!-- MENU ICON -->
+                            <div class="menu-icon-wrp display-none" data-ckav-smd="display-flex">
+                                <div class="menu-icon">
+                                    <div class="bar"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="navigation-wrapper align-right" data-ckav-smd="align-center">
+                                <ul class="navigation-ul">
+                                    
+                                    <li class="navigation-li">
+                                        <a href="#home" class="navigation-a" data-page-type="main-page">Home</a>    
+                                    </li>
+                                    
+                                    <li class="navigation-li">
+                                        <a href="#about" class="navigation-a" data-page-type="inner-page">About</a>    
+                                    </li>
+
+                                    <li class="navigation-li">
+                                        <a href="#gear" class="navigation-a" data-page-type="inner-page">Gear & Setup</a>    
+                                    </li>
+									
+									<li class="navigation-li">
+                                        <a href="https://ivycomb.store" class="navigation-a" data-page-type="inner-page">Merch</a>    
+                                    </li>
+
+                                    <li class="navigation-li">
+                                        <a href="mailto:inbox@ivycomb.com" class="navigation-a" data-page-type="inner-page">Contact</a>    
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- ************** END : HEADER **************  -->
+        
+        <!--
+        ************************************************************
+        * HOME PAGE
+        *************************************************************
+        -->
+        <div class="ckav-home-area main-page flex-bc padding-b-small">
+            <div class="container zindex-1 align-center">
+
+                <!-- INTRO TEXT -->
+                <div class="intro-text width-70 margin-auto typo-light" data-ckav-smd="width-100 align-center">
+                    <h2 class="heading xlarge bold-800" data-ckav-smd="large">Become ANTIHUMAN</h2>
+                    <p class="heading-sub small bold-400 margin-b-0" data-ckav-smd="mini margin-b-40">It's almost time.</p>
+                </div>
+
+            </div>
+
+            <!--=================================
+            = BACKGROUND HOLDER
+            ==================================-->
+            <div class="bg-holder zindex-0">
+                
+                <!-- OVERLAY -->
+                <b data-bgholder="overlay" class="full-wh zindex-2" data-linear-gradient="rgba(1,149,251,0)|rgba(179, 217, 254, 0)"></b>
+                
+                <!-- BACKGROUND IMAGE -->
+                <b data-bgholder="background-image" class="full-wh bg-cover bg-cc zindex-1" data-bg-image="images/bg-01.jpg"></b>
+                
+            </div>
+            <!-- ======= END : BACKGROUND HOLDER =======  -->
+        </div>
+        <!-- ************** END : HOME PAGE **************  -->
+
+        <!--
+        ************************************************************
+        * SUB PAGES
+        *************************************************************
+        -->
+        <div class="ckav-page-area" data-linear-gradient="rgba(1,149,251,0.8)|rgba(179, 217, 254, 0.3)">
+
+            <!--=================================
+            = ABOUT
+            ==================================-->
+            <div id="about" class="about-page page-wrapper">
+                <div class="inner-wrapper">
+                    <!-- PAGE HEADER -->
+                    <div class="page-header-area bgcolor-default typo-light padding-t-40 padding-b-60 align-center" data-ckav-smd="padding-tb-30" data-ckav-md="padding-b-60">
+                        <div class="zindex-2 ckav-shap height-px-100">
+                            <img src="images/wave.png" alt="image">
+                        </div>
+
+                        <h2 class="heading-section large bold-600" data-ckav-smd="default">About</h2>
+                    </div>
+
+                    <div class="container">
+                        <div class="story-area padding-tb-mini">
+                            <div class="row align-items-center gt60">
+
+                                <!-- IMAGES -->
+                                <div class="col-lg-6" data-ckav-smd="margin-b-30">
+                                    <img class="radius-10" src="images/half-bg-01.jpg" alt="image">
+                                </div>
+        
+                                <!-- CONTENT -->
+                                <div class="col-lg-6" data-ckav-smd="align-center">
+                                    <h3 class="heading-content bold-600 medium" data-ckav-smd="small">Hi, I'm ivycomb</h3>
+                                    <p class="heading-content-sub mini bold-400 margin-b-30" data-ckav-smd="tiny margin-b-30">Musician, YouTuber, Twitch Streamer</p>
+                                    <p class="margin-b-30">
+                                        Born in Toronto, ON, and currently residing in Vancouver, BC, Ivy has dedicated their time to learning as much about all that you can create digitally in a wide variety of fields. <br><br>
+
+										With a diverse skillset; music production, singing, voice acting, photography, video editing, motion graphics, animation, programming, and more. Using these skills, Ivy has created a variety of niche works over the years, culminating in a combined following of over 500,000 across their channels! <br><br>
+
+										Ivy has produced music for Regretevator, is releasing their first studio album with Stephanafro, worked for Linus Tech Tips as a writer, worked with Monstercat artists on video projects, among many other small projects and achievements throughout the years.
+										<br>
+                                    </p>
+                                </div>
+        
+                            </div>
+                        </div>
+                        
+                        
+						</div>
+                </div>
+            </div>
+            <!-- ======= END : ABOUT =======  -->
+
+            <!--=================================
+            = SERVICES
+            ==================================-->
+            <div id="gear" class="services-page page-wrapper">
+                <div class="inner-wrapper">
+                    <!-- PAGE HEADER -->
+                    <div class="page-header-area bgcolor-default typo-light padding-t-40 padding-b-60 align-center" data-ckav-smd="padding-tb-30" data-ckav-md="padding-b-60">
+                        <div class="zindex-2 ckav-shap height-px-100">
+                            <img src="images/wave.png" alt="image">
+                        </div>
+
+                        <h2 class="heading-section large bold-600" data-ckav-smd="default">Gear & Setup</h2>
+                    </div>
+
+                    <div class="container">
+                        <div class="services-area padding-tb-mini">
+
+                            <div class="row align-items-center">
+
+                                <div class="col-md-6">
+                                    <div class="info-obj radius-10 info-box-01 img-l padding-30 gap-20 mini" data-bg-color="rgba(0,0,0,0.03)">
+                                        <div class="img"><span class="iconwrp"><i class="pe-7s-headphones"></i></span></div>
+                                        <div class="info">
+                                            <h3 class="heading-content bold-600 tiny">Streaming & Gaming</h3>
+                                            <p class="margin-b-0"><b>Main PC</b>
+											<br>AMD Ryzen 9 7950X3D
+											<br>192GB G.Skill TridentZ Neo DDR5
+											<br>ASUS STRIX RTX 4080 Super (White)
+											<br>GIGABYTE 
+											<br>4TB mixed SSD Storage
+											<br>48TB HDD Storage (4x WD RED 12TB)
+											</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="info-obj radius-10 info-box-01 img-l padding-30 gap-20 mini" data-bg-color="rgba(0,0,0,0.03)">
+                                        <div class="img"><span class="iconwrp"><i class="pe-7s-camera"></i></span></div>
+                                        <div class="info">
+                                            <h3 class="heading-content bold-600 tiny">Video Gear</h3>
+                                            <p class="margin-b-0"><b>Main Camera</b>
+											<br>Sony A7 IV
+											<br>Tamron 28-200mm f/2.8-5.6 
+											<br>Sigma 14mm f/1.4 ART
+											<br>DJI Mic 2
+											<br><b>Secondary Cameras</b>
+											<br>Insta360 One X4 (360 video)
+											<br>DJI Osmo Pocket 3</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="info-obj radius-10 info-box-01 img-l padding-30 gap-20 mini" data-bg-color="rgba(0,0,0,0.03)">
+                                        <div class="img"><span class="iconwrp"><i class="pe-7s-music"></i></span></div>
+                                        <div class="info">
+                                            <h3 class="heading-content bold-600 tiny">Music Production</h3>
+                                            <p class="margin-b-0"><b>Hardware</b>
+											<br>Audio Technica ATH-R70X Headphones
+											<br>Universal Audio Standard SD-1 Microphone 
+											<br>Universal Audio VOLT 476 Audio Interface
+											<br><b>Software</b>
+											<br>FL Studio 2024
+											<br><i>Plugins: </i>EastWest Composer Cloud (Opus), Serum, Vital, Chroma
+											<br></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="info-obj radius-10 info-box-01 img-l padding-30 gap-20 mini" data-bg-color="rgba(0,0,0,0.03)">
+                                        <div class="img"><span class="iconwrp"><i class="pe-7s-display2"></i></span></div>
+                                        <div class="info">
+                                            <h3 class="heading-content bold-600 tiny">VR</h3>
+                                            <p class="margin-b-0"><b>Meta Quest 3</b>
+											<br>Vive Ultimate Trackers x3
+											<br><br><b>HTC Vive Pro Eye</b>
+											<br>Vive Face Tracker
+											<br>SteamVR Base Station 2.0 (x4)
+											<br>Valve Knuckle Controllers
+											<br>5x Vive Tracker 3.0 w/ Trackstrap+</p>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+
+                       </div>
+                </div>
+            </div>
+            <!-- ======= END : SERVICES =======  -->
+
+            <!--=================================
+            = PORTFOLIO
+            ==================================--><!-- ======= END : PORTFOLIO =======  -->
+
+            <!--=================================
+            = TESTIMONIALS
+            ==================================-->
+            <div id="testimonials" class="testimonials-page page-wrapper">
+                <div class="inner-wrapper">
+                    <!-- PAGE HEADER -->
+                    <div class="page-header-area bgcolor-default typo-light padding-t-40 padding-b-60 align-center" data-ckav-smd="padding-tb-30" data-ckav-md="padding-b-60">
+                        <div class="zindex-2 ckav-shap height-px-100">
+                            <img src="images/wave.png" alt="image">
+                        </div>
+
+                        <h2 class="heading-section large bold-600" data-ckav-smd="default">Testimonials</h2>
+                    </div>
+
+                    <div class="container">
+                        <div class="testimonials-area padding-tb-mini padding-t-0">
+
+                            <div class="carousel-widget carouselnav-1 zoom-carousel large padding-b-0 width-90 margin-auto" data-ckav-smd="width-100 align-center" 
+                            data-carousel-items="1"
+                            data-carousel-itemrange="0,1|420,1|600,2|768,3|992,3|1200,3"
+                            data-carousel-autoplay="false" 
+                            data-carousel-margin="30" 
+                            data-carousel-loop="true"
+                            data-carousel-nav="true"
+                            data-carousel-dots="true"
+                            data-carousel-center="true">
+                                <div class="owl-carousel">
+                                    
+                                    <!-- ITEM -->
+                                    <div class="item">
+                                        <div class="inneritem">
+                                            <div class="testimonial-box testimonial-box-5 padding-30 radius-10 info-obj img-t center gap-30 large">
+                                                <div class="img border-white border-10"><img src="images/400x400-01.jpg" class="radius-full" alt="image"></div>
+                                                <div class="info">
+                                                    <p class="heading-content-sub tiny margin-0">Consetetur sadipscing elitr, sed diam tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                                    <hr class="margin-tb-20">
+                                                    <h3 class="heading-content tiny bold-600 margin-0">Oupsum dolor</h3>
+                                                    <em class="fs12">Creative Director</em>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <!-- ITEM -->
+                                    <div class="item">
+                                        <div class="inneritem">
+                                            <div class="testimonial-box testimonial-box-5 padding-30 radius-10 info-obj img-t center gap-30 large">
+                                                <div class="img border-white border-10"><img src="images/400x400-02.jpg" class="radius-full" alt="image"></div>
+                                                <div class="info">
+                                                    <p class="heading-content-sub tiny margin-0">Consetetur sadipscing elitr, sed diam tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                                    <hr class="margin-tb-20">
+                                                    <h3 class="heading-content tiny bold-600 margin-0">Oupsum dolor</h3>
+                                                    <em class="fs12">Creative Director</em>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <!-- ITEM -->
+                                    <div class="item">
+                                        <div class="inneritem">
+                                            <div class="testimonial-box testimonial-box-5 padding-30 radius-10 info-obj img-t center gap-30 large">
+                                                <div class="img border-white border-10"><img src="images/400x400-03.jpg" class="radius-full" alt="image"></div>
+                                                <div class="info">
+                                                    <p class="heading-content-sub tiny margin-0">Consetetur sadipscing elitr, sed diam tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                                    <hr class="margin-tb-20">
+                                                    <h3 class="heading-content tiny bold-600 margin-0">Oupsum dolor</h3>
+                                                    <em class="fs12">Creative Director</em>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <!-- ITEM -->
+                                    <div class="item">
+                                        <div class="inneritem">
+                                            <div class="testimonial-box testimonial-box-5 padding-30 radius-10 info-obj img-t center gap-30 large">
+                                                <div class="img border-white border-10"><img src="images/400x400-04.jpg" class="radius-full" alt="image"></div>
+                                                <div class="info">
+                                                    <p class="heading-content-sub tiny margin-0">Consetetur sadipscing elitr, sed diam tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                                    <hr class="margin-tb-20">
+                                                    <h3 class="heading-content tiny bold-600 margin-0">Oupsum dolor</h3>
+                                                    <em class="fs12">Creative Director</em>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                        <div class="clients-area padding-b-mini">
+                            <div class="width-50 margin-auto align-center margin-b-40" data-ckav-smd="width-100">
+                                <h3 class="heading-content bold-600 medium" data-ckav-smd="small">Our Clients</h3>
+                                <p class="heading-content-sub mini bold-400" data-ckav-smd="tiny margin-b-40">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem asperiores delectus quas deserunt</p>
+                            </div>
+
+                            <div class="rw gt10 col-mb10 eq6 clients-grid clients-grid-02 opacity-06" data-ckav-sm="flex-cc eq2" data-ckav-md="flex-cc eq2">
+                                <div class="cl client-box">
+                                    <a href="#" class="client-link radius-10">
+                                        <img src="images/brand-logo4.png" alt="brand">
+                                    </a>
+                                </div>
+                                <div class="cl client-box">
+                                    <a href="#" class="client-link radius-10">
+                                        <img src="images/brand-logo5.png" alt="brand">
+                                    </a>
+                                </div>
+                                <div class="cl client-box">
+                                    <a href="#" class="client-link radius-10">
+                                        <img src="images/brand-logo6.png" alt="brand">
+                                    </a>
+                                </div>
+                                <div class="cl client-box">
+                                    <a href="#" class="client-link radius-10">
+                                        <img src="images/brand-logo7.png" alt="brand">
+                                    </a>
+                                </div>
+                                <div class="cl client-box">
+                                    <a href="#" class="client-link radius-10">
+                                        <img src="images/brand-logo1.png" alt="brand">
+                                    </a>
+                                </div>
+                                <div class="cl client-box">
+                                    <a href="#" class="client-link radius-10">
+                                        <img src="images/brand-logo2.png" alt="brand">
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ======= END : TESTIMONIALS =======  -->
+
+            <div class="ckav-footer-area">
+                <div class="inner-wrapper">
+                    <div class="container-fluid">
+                        <div class="row align-items-center height-px-100" data-ckav-sm="align-center">
+    
+                            <!-- SOCIAL ICONS -->
+                            <div class="col-md-6">
+                                <div class="social-section" data-ckav-sm="-margin-b-20">
+                                    <div>
+                                        <a href="https://bsky.app/profile/ivy.cm" class="button button-icon radius-full margin-r-10 color-button-white border-glass"><i class="fab fa-bluesky"></i></a>
+                                        <a href="https://twitter.com/ivycomb" class="button button-icon radius-full margin-r-10 color-button-white border-glass"><i class="fab fa-twitter"></i></a>
+                                        <a href="https://youtube.com/@ivycomb" class="button button-icon radius-full margin-r-10 color-button-white border-glass"><i class="fab fa-youtube"></i></a>
+                                        <a href="https://open.spotify.com/artist/12WiIkK6iBWyRefeKpMaKo?si=4viWFmGWRXayioPSg2AIpQ" class="button button-icon radius-full margin-r-10 color-button-white border-glass"><i class="fab fa-spotify"></i></a>
+										<a href="https://discord.gg/ivy" class="button button-icon radius-full margin-r-10 color-button-white border-glass"><i class="fab fa-discord"></i></a>
+										<a href="https://instagram.com/ivycomb" class="button button-icon radius-full margin-r-10 color-button-white border-glass"><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- COPYRIGHT -->
+                            <div class="col-md-6 align-right color-text-white" data-ckav-sm="align-center">
+                                <a class="color-text-white">ivycomb</a> © <script>document.write(new Date().getFullYear());</script>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- ************** END : SUB PAGES **************  -->
+
+    </div>
+    
+<!-- COMMON VENDOR SCRIPTS -->
+<script src="vendor/jquery/jquery-3.3.1.min.js"></script>
+<script src="vendor/jquery/jquery-migrate-3.0.0.min.js"></script>
+<script src="vendor/popper/umd/popper.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/jquery-validation/jquery.validate.min.js"></script>
+<script src="vendor/sweetalert/sweetalert2.min.js"></script>
+<script src="vendor/jarallax/jarallax.min.js"></script>
+<script src="vendor/owlcarousel/owl.carousel.min.js"></script>
+<script src="vendor/swiper/js/swiper.min.js"></script>
+<script src="vendor/jQuery-viewport-checker/jquery.viewportchecker.min.js"></script>
+<script src="vendor/enquire/enquire.min.js"></script>
+<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="vendor/isotope/imagesloaded.pkgd.min.js"></script>
+<script src="vendor/isotope/isotope.pkgd.min.js"></script>
+<script src="vendor/isotope/packery-mode.pkgd.min.js"></script>
+
+<!-- PAGE SPECIFIC VENDOR SCRIPTS -->
+
+<!-- TEMPLATE COMMON SCRIPTS -->
+<script src="js/ckav-main.js"></script>
+
+
+</body>
+</html>
